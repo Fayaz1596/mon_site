@@ -111,7 +111,7 @@ else
      // Animation texte des blocs "menu" et "branding"
     $(".hide-menu").textillate(
     {
-        initialDelay: 500,
+        initialDelay: 600,
         in: 
         {
             effect: 'fadeInDown', 
@@ -122,7 +122,7 @@ else
 
     $(".hide-brand1").textillate(
     {
-        initialDelay: 1000,
+        initialDelay: 800,
         in: 
         {
             effect: 'fadeInLeft', 
@@ -133,7 +133,7 @@ else
 
     $(".hide-brand2").textillate(
     {
-        initialDelay: 1000,
+        initialDelay: 800,
         in: 
         {
             effect: 'fadeInLeft', 
@@ -151,38 +151,38 @@ else
     // Effet de fondu chaque bloc
     $("#about").hover(function()
     {
-        $(".profile").delay(300).animate({opacity: 1, top: 0}, 800);
+        $(".profile").delay(300).animate({opacity: 1, top: 0}, 600);
     });
     $("a#abo").click(function()
     {
-        $(".profile").delay(700).animate({opacity: 1, top: 0}, 800);
+        $(".profile").delay(700).animate({opacity: 1, top: 0}, 600);
     });
 
     $("#course").hover(function()
     {
-        $(".course").delay(300).animate({opacity: 1, top: 0}, 800);
+        $(".course").delay(300).animate({opacity: 1, top: 0}, 600);
     });
     $("a#cou").click(function() 
     {
-        $(".course").delay(700).animate({opacity: 1, top: 0}, 800);
+        $(".course").delay(700).animate({opacity: 1, top: 0}, 600);
     });
 
     $("#projets").hover(function()
     {
-        $(".projets").delay(300).animate({opacity: 1, top: 0}, 800);
+        $(".projets").delay(300).animate({opacity: 1, top: 0}, 600);
     });
     $("a#pro").click(function()
     {
-        $(".projets").delay(700).animate({opacity: 1, top: 0}, 800);
+        $(".projets").delay(700).animate({opacity: 1, top: 0}, 600);
     });
 
     $("#contact").hover(function()
     {
-        $(".contact").delay(300).animate({opacity: 1, top: 0}, 800);
+        $(".contact").delay(300).animate({opacity: 1, top: 0}, 600);
     });
     $("a#con").click(function()
     {
-        $(".contact").delay(700).animate({opacity: 1, top: 0}, 800);
+        $(".contact").delay(700).animate({opacity: 1, top: 0}, 600);
     });
     
     
