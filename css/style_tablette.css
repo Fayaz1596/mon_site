@@ -1,0 +1,449 @@
+@media screen and (max-width: 1023px)
+{
+    /*body:before
+    {
+        background: #fda500;
+        position: fixed;
+        content: "Responsive version tablette";
+        margin-top: 6em;
+        padding: 2px;
+        z-index: 2;
+    }*/
+    
+    
+    /** Général **/
+    
+    .container
+    {
+        width: 90%;
+    }
+    
+    
+    
+    /**************/
+    /*** HEADER ***/
+    /**************/
+    
+    .header-img
+    {
+        display: block;
+        z-index: -1;
+        object-fit: cover;
+        width: 100%;
+        min-height: 100vh;
+    }
+    
+    #videoDiv
+    {
+        display: none;
+    }
+    
+    
+    /*** Roof ***/
+    
+    .roof
+    {
+        height: 3.4em;
+        overflow: visible;
+    }
+    
+    .logo
+    {
+        margin-left: 0;
+    }
+    
+    .logo img
+    {
+        width: 2.4em;
+        margin-left: 0.6em;
+        margin-right: 0.4em;
+        flex-shrink: 0;
+        -webkit-flex-shrink: 0;
+        opacity: 1;
+        animation: none;
+        -webkit-animation: none;
+    }
+    
+    .logo h1
+    {
+        opacity: 1;
+        animation: none;
+        -webkit-animation: none;
+        font-size: 12px;
+    }
+    
+    
+    /*** Nav ***/
+    
+    .nav-main
+    {
+        display: none;
+    }
+    
+    .active:hover
+    {
+        background-color: none;
+        transition: none;
+    }
+    
+    .dropdown-content a.menu.active
+    {
+        background-color: rgba(91, 62, 0, 1);
+    }
+    
+    .button
+    {
+        width: 75%;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: flex-end;
+        -webkit-justify-content: flex-end;
+    }
+    
+     /* Dropdown Button */
+    .dropbtn 
+    {
+        background-color: transparent;
+        color: #E2D5AB;
+        font-size: 19px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s linear;
+        padding: 0 0.6em 0 0.6em;
+        -webkit-appearance: none;
+	    -moz-appearance: none;
+	    appearance: none;
+        line-height: 0;
+        /*border: 1px solid blue;*/
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown
+    {
+        width: 100%;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: flex-end;
+        -webkit-justify-content: flex-end;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content
+    {
+        display: none;
+        position: fixed;
+        background-color: #db9000;
+        left: 0;
+        right: 0;
+        margin-top: 3.35em;
+        text-align: center;
+        border-top: 1px solid black;
+        box-shadow: 0 2px 2px black;
+        max-height: 55%;
+        overflow-y: scroll;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a
+    {
+        color: #E2D5AB;
+        text-decoration: none;
+        transition: all 0.2s linear;
+        padding: 0.9em;
+        font-size: 16px; 
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid black;
+        font-weight: 400;
+        font-family: 'Quicksand', sans-serif;
+    }
+    
+
+    /** Branding **/
+    
+    .branding
+    {
+        padding: 4rem 3rem;
+    }
+    
+    .branding h1
+    {
+        font-size: 2.3rem;
+    }
+
+    .branding h2
+    {
+        font-size: 1.8rem;
+        font-family: 'Quicksand', sans-serif;
+    }
+    
+    
+    
+    /************/
+    /*** MAIN ***/
+    /************/
+    
+    /***** Profile *****/
+    
+    #about
+    {
+        min-height: 50vh;
+    }
+    
+    .fa-info-circle
+    {
+        font-size: 1.9em;
+    }
+    
+    .profile
+    {
+        padding: 4rem 3rem;
+    }
+    
+    .profile h2
+    {
+        font-size: 24px;
+    }
+
+    .profile p
+    {
+        font-size: 17px;
+    }
+    
+    .profile img
+    {
+        width: 140px;
+    }
+    
+    a .fa-linkedin
+    {
+        font-size: 1.6em;
+    }
+
+    a .fa-linkedin:hover
+    {
+        opacity: 1;
+        transition: none;
+    }
+    
+    
+    /***** Course *****/
+    
+    #course
+    {
+        background-attachment: scroll;
+        min-height: 50vh;
+    }
+    
+    .fa-graduation-cap
+    {
+        font-size: 1.9em;
+    }
+    
+    .course
+    {
+        padding: 4rem 3rem;
+    }
+
+    .course h2
+    {
+        font-size: 24px;
+    }
+
+    .course p, .course .titre p
+    {
+        font-size: 17px;
+    }
+    
+    .competences > div
+    {
+        width: 272px;
+    }
+    
+    .intitule span
+    {
+        font-size: 15px;
+    }
+
+    .lanw p, .lanp p
+    {
+        font-size: 15px;
+    }
+
+    .consulter
+    {
+        font-size: 15px;
+        transition: none;
+    }
+    
+    .consulter:hover
+    {
+        background-color: #d28a00;
+    }
+ 
+    
+    /***** Projets *****/
+    
+    #projets
+    {
+        background-attachment: scroll;
+        min-height: 50vh;
+    }
+    
+    .projets
+    {
+        padding: 4rem 3rem;
+    }
+    
+    .fa-pen-square
+    {
+        font-size: 1.9em;
+    }
+    
+    .projets .titre h2
+    {
+        font-size: 24px;
+    }
+    
+    .projets .titre p
+    {
+        font-size: 17px;
+    }
+    
+    .fa-link
+    {
+        font-size: 0.9em;
+    }
+    
+    .liste
+    {
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        width: 255px;
+    }
+    
+    .nom
+    {
+        height: 5.5rem;
+    }
+    
+    .nom:hover
+    {
+        transition: none;
+        border: 2px solid #d28a00;
+    }
+    
+    .nom a, .nom h3
+    {
+        font-size: 15px;
+    }
+    
+    .nom span
+    {
+        font-size: 13px;
+    }
+    
+    .voir
+    {
+        font-size: 15px;
+        transition: none;
+    }
+    
+    .voir:hover
+    {
+        transition: none;
+        background-color: #d28a00;
+    }
+    
+    
+    /***** Contact *****/
+    
+    #contact
+    {
+        min-height: 50vh;
+    }
+    
+    .fa-address-card
+    {
+        font-size: 1.9em;
+    }
+    
+    .contact
+    {
+        padding: 4rem 3rem;
+    }
+
+    .contact h2
+    {
+        font-size: 24px;
+    }
+
+    .contact p.texte
+    {
+        font-size: 17px;
+    }
+
+    .champ_input input
+    {
+        margin: 10px 4px 0;
+        width: 256px;
+        font-size: 15px;
+    }
+
+    .champ > textarea
+    {
+        width: 34.7em;
+        font-size: 15px;
+    }
+    
+    .champ_input input:hover, .champ textarea:hover, .champ_input input:focus, .champ textarea:focus
+    {
+        transition: none;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .champ > button.submit
+    {
+        font-size: 15px;
+        -webkit-appearance: none;
+	    -moz-appearance: none;
+	    appearance: none;
+    }
+    
+    .champ > button.submit:hover
+    {
+        transition: none;
+        background-color: #d28a00;
+    }
+    
+    .fa-check-circle, .fa-exclamation-triangle, .fa-spinner, .redmsg, .greenmsg, .orangemsg
+    {
+        font-size: 13px;
+    }
+    
+    .redmsg, .greenmsg, .orangemsg
+    {
+        font-size: 13px;
+    }
+    
+    
+    
+    /**************/
+    /*** FOOTER ***/
+    /**************/
+    
+    #footer-main
+    {
+        margin-top: 0;
+        min-height: 50vh;
+    }
+    
+    .copyright h3
+    {
+        font-size: 10px;
+    }
+
+}

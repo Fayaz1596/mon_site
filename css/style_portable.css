@@ -1,0 +1,322 @@
+@media screen and (min-width: 200px) and (max-width: 767px)
+{
+    /*body:before
+    {
+        background: royalblue;
+        position: fixed;
+        content: "Responsive version mobile";
+        margin-top: 6em;
+        padding: 2px;
+    }*/
+    
+    .container
+    {
+        width: 100%;
+        /*border: 1px solid pink;*/
+    }
+    
+    
+    /**************/
+    /*** HEADER ***/
+    /**************/
+    
+    #videoDiv
+    {
+        display: none;
+    }
+    
+    
+    /*** Roof ***/
+    
+    .roof
+    {
+        height: 3em;
+        overflow: visible;
+    }
+    
+    .logo img
+    {
+        width: 2.1em;
+        margin-left: 0.5em;
+    }
+    
+    .logo h1
+    {
+        font-size: 11px;
+    }
+    
+    
+    /*** Nav ***/
+    
+    .dropbtn
+    {
+        font-size: 18px;
+    }
+
+    .dropdown
+    {
+        width: 100%;
+    }
+    
+    .dropdown-content
+    {
+        margin-top: 3em;
+    }
+
+    .dropdown-content a
+    {
+        padding: 0.8em;
+        font-size: 15px; 
+    }
+    
+    
+    /** Branding **/
+    
+    .branding
+    {
+        padding: 20vw 8vw 20vw 8vw;
+    }
+    
+    .branding h1
+    {
+        font-size: 2rem;
+    }
+
+    .branding h2
+    {
+        font-size: 1.5rem;
+    }
+    
+    
+    
+    /************/
+    /*** MAIN ***/
+    /************/
+    
+    /** Profile **/
+    
+    .fa-info-circle
+    {
+        font-size: 1.8em;
+    }
+    
+    .profile
+    {
+        padding: 8vw;
+    }
+    
+    .profile h2
+    {
+        font-size: 23px;
+    }
+
+    .profile p
+    {
+        font-size: 16px;
+    }
+    
+    .profile img
+    {
+        width: 120px;
+    }
+    
+    a .fa-linkedin
+    {
+        font-size: 1.5em;
+    }
+    
+    
+    /***** Course *****/
+    
+    .fa-graduation-cap
+    {
+        font-size: 1.8em;
+    }
+    
+    .course
+    {
+        padding: 8vw;
+    }
+
+    .course h2
+    {
+        font-size: 23px;
+    }
+
+    .course p
+    {
+        font-size: 16px;
+    }
+    
+    .competences
+    {
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+    }
+    
+    .competences > div
+    {
+        width: 90%;
+        max-width: 25em;
+    }
+
+    .intitule span
+    {
+        font-size: 14px;
+    }
+    
+    .lanw, .lanp
+    {
+        width: 30%;
+    }
+    
+    .consulter
+    {
+        padding: 0.4em 0.8em;
+        font-size: 14px;
+    }
+
+    
+    /***** Projets *****/
+    
+    .fa-pen-square
+    {
+        font-size: 1.8em;
+    }
+    
+    .projets
+    {
+        padding: 8vw;
+    }
+    
+    .projets .titre h2
+    {
+        font-size: 23px;
+    }
+    
+    .projets .titre p
+    {
+        font-size: 16px;
+    }
+    
+    .fa-link
+    {
+        font-size: 0.8em;
+    }
+    
+    .category
+    {
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        /*border: 1px solid green;*/
+    }
+    
+    .liste
+    {
+        width: 90%;
+        max-width: 20em;
+    }
+    
+    .nom
+    {
+        height: 4.5rem;
+    }
+    
+    .nom a, .nom h3
+    {
+        font-size: 14px;
+    }
+    
+    .nom span
+    {
+        font-size: 12px;
+    }
+    
+    .voir
+    {
+        padding: 0.4em 0.8em;
+        font-size: 14px;
+    }
+    
+    
+    /***** Contact *****/
+    
+    .contact
+    {
+        padding: 8vw;
+    }
+    
+    .fa-address-card
+    {
+        font-size: 1.8em;
+    }
+
+    .contact h2
+    {
+        font-size: 23px;
+    }
+
+    .contact p.texte
+    {
+        font-size: 16px;
+    }
+    
+    .champ_input
+    {
+        flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+
+    .champ_input input, .champ > textarea
+    {
+        width: 90%;
+        max-width: 25em;
+        font-size: 14px;
+        padding: 0.6em;
+        transition: all 0.2s linear;
+    }
+
+    .champ_input input:hover, .champ textarea:hover, .champ_input input:focus, .champ textarea:focus
+    {
+        transition: none;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .champ > button.submit
+    {
+        padding: 0.4em 0.8em;
+        font-size: 14px;
+    }
+    
+    .fa-check-circle, .fa-exclamation-triangle, .fa-spinner
+    {
+        font-size: 12px;
+    }
+    
+    .redmsg, .greenmsg, .orangemsg
+    {
+        font-size: 12px; 
+        padding: 6px; 
+        max-width: 20em;
+        width: 90%;
+        margin-top: -2em;
+    }
+    
+    
+    
+    /**************/
+    /*** FOOTER ***/
+    /**************/
+    
+    #footer-main
+    {
+        min-height: 40vh;
+    }
+
+    .copyright h3
+    {
+        font-size: 9px;
+        padding: 0.6em;
+    }
+
+}
