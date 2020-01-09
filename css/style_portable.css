@@ -93,7 +93,7 @@
     /*** MAIN ***/
     /************/
     
-    /** Profile **/
+    /***** Profile *****/
     
     .fa-info-circle
     {
@@ -143,7 +143,7 @@
         font-size: 23px;
     }
 
-    .course p
+    .course p, .course .titre p
     {
         font-size: 16px;
     }
@@ -168,6 +168,11 @@
     .lanw, .lanp
     {
         width: 30%;
+    }
+    
+    .intitule span, .lanw p, .lanp p
+    {
+        font-size: 14px;
     }
     
     .consulter
