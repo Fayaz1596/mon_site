@@ -169,6 +169,17 @@
     {
         width: 30%;
     }
+
+    .fa-html5, .fa-css3-alt, .fa-js, .fa-php, .fa-symfony, .fa-angular, .fa-bootstrap, 
+    .fa-laravel, .fa-java, .fa-python, .fa-android
+    {
+        font-size: 30px;
+    }
+
+    .fa-csharp
+    {
+        width: 30px;
+    }
     
     .intitule span, .lanw p, .lanp p
     {
@@ -278,7 +289,6 @@
         max-width: 25em;
         font-size: 14px;
         padding: 0.6em;
-        transition: all 0.2s linear;
     }
 
     .champ_input input:hover, .champ textarea:hover, .champ_input input:focus, .champ textarea:focus

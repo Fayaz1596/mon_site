@@ -260,6 +260,17 @@
     {
         width: 272px;
     }
+
+    .fa-html5, .fa-css3-alt, .fa-js, .fa-php, .fa-symfony, .fa-angular, .fa-bootstrap, 
+    .fa-laravel, .fa-java, .fa-python, .fa-android
+    {
+        font-size: 31px;
+    }
+
+    .fa-csharp
+    {
+        width: 31px;
+    }
     
     .intitule span, .lanw p, .lanp p
     {

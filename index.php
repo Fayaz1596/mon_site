@@ -25,7 +25,7 @@
             <div class="nav-main">
                 <div class="logo">
                     <a href="http://fayazprojetweb.byethost32.com/"><img src="img/logo.png" alt="logo"></a>
-                    <h1>BETA</h1>
+                    <!-- <h1>BETA</h1> -->
                 </div>
                 <nav>
                     <ul>
@@ -40,7 +40,7 @@
             <div class="dropdown">
                 <div class="logo">
                     <a href="http://fayazprojetweb.byethost32.com/"><img src="img/logo.png" alt="logo"></a>
-                    <h1>BETA</h1>
+                    <!-- <h1>BETA</h1> -->
                 </div>
                 <div class="button">
                     <button class="dropbtn"><i class="fas fa-bars"></i></button>
@@ -84,7 +84,7 @@
                                 <i class="fab fa-linkedin"></i>
                             </a>
                         </p>
-                        <p>Je m'appelle Bavasahib, j'ai 23 ans et je suis en Île-de-France.</p>
+                        <p>Je m'appelle Bavasahib, j'ai 24 ans et je suis en Île-de-France.</p>
                         <p>Je suis étudiant et passionné par le développement web depuis 3 ans, précisément sur de l'intégration/développement front-end.</p>
                         <img src="img/signature.png" alt="signature">
                     </div>
@@ -111,35 +111,35 @@
                                 </div>
                                 <article class="web">
                                     <div class="lanw">
-                                        <i class="fab fa-html5 fa-2x" style="color: #e34f26;"></i>
+                                        <i class="fab fa-html5" style="color: #e34f26;"></i>
                                         <p>HTML</p>
                                     </div>
                                     <div class="lanw">
-                                        <i class="fab fa-css3-alt fa-2x" style="color: #2565AE;"></i>
+                                        <i class="fab fa-css3-alt" style="color: #2565AE;"></i>
                                         <p>CSS</p>
                                     </div>
                                     <div class="lanw">
-                                        <i class="fab fa-js fa-2x" style="color: #f7df1e;"></i>
+                                        <i class="fab fa-js" style="color: #f7df1e;"></i>
                                         <p>JavaScript</p>
                                     </div>
                                     <div class="lanw">
-                                        <i class="fab fa-php fa-2x" style="color: #8892be;"></i>
+                                        <i class="fab fa-php" style="color: #8892be;"></i>
                                         <p>PHP</p>
                                     </div>
                                     <div class="lanw">
-                                        <i class="fab fa-symfony fa-2x" style="color: black;"></i>
+                                        <i class="fab fa-symfony" style="color: black;"></i>
                                         <p>Symfony 3</p>
                                     </div>
                                     <div class="lanw">
-                                        <i class="fab fa-angular fa-2x" style="color: #b52e31;"></i>
+                                        <i class="fab fa-angular" style="color: #b52e31;"></i>
                                         <p>Angular 8</p>
                                     </div>
                                     <div class="lanw">
-                                        <i class="fab fa-bootstrap fa-2x" style="color: #602C50;"></i>
+                                        <i class="fab fa-bootstrap" style="color: #602C50;"></i>
                                         <p>Bootstrap</p>
                                     </div>
                                     <div class="lanw">
-                                        <i class="fab fa-laravel fa-2x" style="color: #f55247;"></i>
+                                        <i class="fab fa-laravel" style="color: #f55247;"></i>
                                         <p>Laravel</p>
                                     </div>
                                 </article>
@@ -151,12 +151,20 @@
                                 </div>
                                 <article class="logiciel">
                                     <div class="lanp">
-                                        <i class="fab fa-java fa-2x" style="color: #ED8B00;"></i>
+                                        <i class="fab fa-java" style="color: #ED8B00;"></i>
                                         <p>Java</p>
                                     </div>
                                     <div class="lanp">
-                                        <i class="fab fa-python fa-2x" style="color: #4584b6;"></i>
+                                        <i class="fab fa-python" style="color: #4584b6;"></i>
                                         <p>Python</p>
+                                    </div>
+                                    <div class="lanp">
+                                        <i class="fab fa-android" style="color: #a4c639;"></i>
+                                        <p>Android</p>
+                                    </div>
+                                    <div class="lanp">
+                                        <img src="img/csharp.png" class="fa-csharp">
+                                        <p>C#</p>
                                     </div>
                                 </article>
                             </div>
@@ -256,14 +264,14 @@
                             </p>
                             <div class="champ_input">
                                 <div>
-                                    <input type="text" name="nom" id="nom" placeholder="Votre nom (Exemple)" value="">
+                                    <input type="text" name="nom" id="nom" placeholder="Nom et prénom" value="">
                                 </div>
                                 <div>
-                                    <input type="email" name="email" id="email" placeholder="Votre e-mail (exemple@exemple.fr)" value="">
+                                    <input type="email" name="email" id="email" placeholder="E-mail" value="">
                                 </div>
                             </div>
                             <p class="champ">
-                                <textarea name="message" id="message" maxlength="500" placeholder="Votre message"></textarea>
+                                <textarea name="message" id="message" maxlength="500" placeholder="Message"></textarea>
                             </p>
                             <p class="champ">
                                 <button class="submit" id="envoyer">Envoyer le message</button>
@@ -279,7 +287,7 @@
         <footer id="footer-main">
             <div class="container">
                 <div class="copyright">
-                    <h3>Tous droits réservés © 2019</h3>
+                    <h3>Tous droits réservés © 2020</h3>
                 </div>
             </div>
         </footer>

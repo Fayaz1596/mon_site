@@ -10,7 +10,26 @@
     $message = trim($_POST['message']);
 
     if(!empty($nom) && !empty($email) && !empty($message))
-    {
+    {   
+        if(strlen($nom) <= 3 && !filter_var($email, FILTER_VALIDATE_EMAIL))
+        {
+            $statut = "mauvais";
+            $info = "Le nom et prénom doit contenir au moins 3 caractères et l'e-mail n'est pas entièrement saisi !";
+        }
+        else
+        {
+            if(strlen($nom) <= 3)
+            {
+                $statut = "mauvais";
+                $info = "Le nom et prénom doit contenir au moins 3 caractères !";
+            }
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+            {
+                $statut = "mauvais";
+                $info = "L'e-mail n'est pas entièrement saisi !";
+            }
+        }
+
         $mail = new PHPMailer;
 
         $mail->isSMTP();
@@ -31,9 +50,9 @@
         $mail->AddEmbeddedImage("img/banniere.jpg", "ma_banniere", "img/banniere.jpg");
         $mail->Body = '<html>
                             <body>
-                                <div align = "center">
+                                <div align="center">
                                     <img src="cid:ma_banniere" alt="ma_banniere"/><br>
-                                    <font size = "2pt">
+                                    <font size="2pt">
                                         <u>Nom de l\'expéditeur :</u> '.$_POST['nom'].'<br />
                                         <u>E-mail de l\'expéditeur :</u> '.$_POST['email'].'<br />
                                     </font>
@@ -49,9 +68,6 @@
         {
             $statut = 'bon';
             $info = 'Votre message a été envoyé !';
-        }
-        else
-        {
         }
     }
     else

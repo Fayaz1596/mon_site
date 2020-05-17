@@ -104,30 +104,18 @@ else
             }
         });
     });
-    
-    
-    $(".hide-menu, .hide-brand1, .hide-brand2").css('visiblility', 'hidden');
 
-     // Animation texte des blocs "menu" et "branding"
-    $(".hide-menu").textillate(
-    {
-        initialDelay: 600,
-        in: 
-        {
-            effect: 'fadeInDown', 
-            sync: true, 
-            delay: 25
-        }
-    });
+    
+    $(".hide-brand1, .hide-brand2").css('visiblility', 'hidden');
 
     $(".hide-brand1").textillate(
     {
         initialDelay: 800,
         in: 
         {
-            effect: 'fadeInLeft', 
+            effect: 'fadeInUp', 
             sequence: true, 
-            delay: 40
+            delay: 20
         }
     });
 
@@ -136,9 +124,9 @@ else
         initialDelay: 800,
         in: 
         {
-            effect: 'fadeInLeft', 
+            effect: 'fadeInUp', 
             sequence: true, 
-            delay: 20
+            delay: 10
         }
     });
 
@@ -151,38 +139,38 @@ else
     // Effet de fondu chaque bloc
     $("#about").hover(function()
     {
-        $(".profile").delay(300).animate({opacity: 1, top: 0}, 600);
+        $(".profile").delay(150).animate({opacity: 1, top: 0}, 500);
     });
     $("a#abo").click(function()
     {
-        $(".profile").delay(700).animate({opacity: 1, top: 0}, 600);
+        $(".profile").delay(650).animate({opacity: 1, top: 0}, 500);
     });
 
     $("#course").hover(function()
     {
-        $(".course").delay(300).animate({opacity: 1, top: 0}, 600);
+        $(".course").delay(150).animate({opacity: 1, top: 0}, 500);
     });
     $("a#cou").click(function() 
     {
-        $(".course").delay(700).animate({opacity: 1, top: 0}, 600);
+        $(".course").delay(650).animate({opacity: 1, top: 0}, 500);
     });
 
     $("#projets").hover(function()
     {
-        $(".projets").delay(300).animate({opacity: 1, top: 0}, 600);
+        $(".projets").delay(150).animate({opacity: 1, top: 0}, 500);
     });
     $("a#pro").click(function()
     {
-        $(".projets").delay(700).animate({opacity: 1, top: 0}, 600);
+        $(".projets").delay(650).animate({opacity: 1, top: 0}, 500);
     });
 
     $("#contact").hover(function()
     {
-        $(".contact").delay(300).animate({opacity: 1, top: 0}, 600);
+        $(".contact").delay(150).animate({opacity: 1, top: 0}, 500);
     });
     $("a#con").click(function()
     {
-        $(".contact").delay(700).animate({opacity: 1, top: 0}, 600);
+        $(".contact").delay(650).animate({opacity: 1, top: 0}, 500);
     });
     
     
@@ -196,14 +184,13 @@ else
 
 document.getElementById("nom").addEventListener("input", function(e) 
 {
-    var test = e.target.value;
     var nom = document.getElementById("nom");
 
-    if(test.length == 0)
+    if(e.target.value.length == 0)
     {
         nom.style.boxShadow = "inset -6px 0 0 0 black";
     }
-    else if(test.length <= 2) 
+    else if(e.target.value.length < 3) 
     {
         nom.style.boxShadow = "inset -6px 0 0 0 #ff0000";
     } 
@@ -221,8 +208,7 @@ document.getElementById("email").addEventListener("input", function(e)
     {
         email.style.boxShadow = "inset -6px 0 0 0 black";
     }
-
-    else if(e.target.value.indexOf("@") === -1 && e.target.value.length > 0) 
+    else if(!e.target.value.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{1,}))$/))
     {
         email.style.boxShadow = "inset -6px 0 0 0 #ff0000";
     }
@@ -231,6 +217,7 @@ document.getElementById("email").addEventListener("input", function(e)
         email.style.boxShadow = "inset -6px 0 0 0 #00ff0a";
     }
 });
+
 
 $(".dropbtn").click(function() // Affichage du menu
 {
@@ -281,7 +268,7 @@ $(function()
         setTimeout(function()
         {
             video[0].play();
-        }, 3000);
+        }, 2500);
     });
 });
 

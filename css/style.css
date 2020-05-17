@@ -182,29 +182,11 @@ a
     color: #E2D5AB;
 }
 
-@keyframes rotation 
-{
-    100%
-    {
-        transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@-webkit-keyframes rotation 
-{
-    100%
-    {
-        transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-    }
-}
-
 .logo img
 {
     width: 3em;
-    animation: fondu 1s forwards 0.25s, rotation 15s linear 1s infinite;
-    -webkit-animation: fondu 1s forwards 0.25s, rotation 15s linear 1s infinite;
+    animation: fondu 1s forwards 0.25s;
+    -webkit-animation: fondu 1s forwards 0.25s;
     vertical-align: middle;
     display: flex;
     display: -webkit-flex;
@@ -301,6 +283,52 @@ nav a
     padding: 1.4em 0.9em 1.4em 0.9em;
     font-family: 'Quicksand', sans-serif;
 /*    border: 1px solid blue;*/
+}
+
+.hide-menu
+{
+    animation: fondu1 1s forwards 0.25s;
+    -webkit-animation: fondu1 1s forwards 0.25s;
+    position: relative;
+    opacity: 0;
+}
+
+@keyframes fondu1
+{
+    0% 
+    {
+        right: 100px;
+    }
+    
+    30%
+    {
+        opacity: 0;
+    }
+    
+    100% 
+    {
+        opacity: 1;
+        right: 0;
+    }
+}
+
+@-webkit-keyframes fondu1
+{
+    0% 
+    {
+        right: 100px;
+    }
+    
+    30%
+    {
+        opacity: 0;
+    }
+    
+    100% 
+    {
+        opacity: 1;
+        right: 0;
+    }
 }
 
 nav a:hover 
@@ -550,6 +578,17 @@ a .fa-linkedin:hover
     font-size: 16px;
     font-weight: 300;
     padding: 0;
+}
+
+.fa-html5, .fa-css3-alt, .fa-js, .fa-php, .fa-symfony, .fa-angular, .fa-bootstrap, 
+.fa-laravel, .fa-java, .fa-python, .fa-android
+{
+    font-size: 32px;
+}
+
+.fa-csharp
+{
+    width: 32px;
 }
 
 .consulter
