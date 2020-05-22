@@ -77,12 +77,12 @@
         padding: 20vw 8vw 20vw 8vw;
     }
     
-    .branding h1
+    .branding h1:first-child
     {
         font-size: 2rem;
     }
 
-    .branding h2
+    .branding h1:last-child
     {
         font-size: 1.5rem;
     }
@@ -252,8 +252,76 @@
     {
         padding: 0.4em 0.8em;
         font-size: 14px;
+        height: 29.2px;
     }
     
+
+    /***** Tâches *****/
+    
+    .fa-pen-square
+    {
+        font-size: 1.8em;
+    }
+    
+    .taches
+    {
+        padding: 8vw;
+    }
+    
+    .taches .titre h2
+    {
+        font-size: 23px;
+    }
+    
+    .taches .titre p
+    {
+        font-size: 16px;
+    }
+
+    .liste_taches
+    {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .all-tasks
+    {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .todo-list
+    {
+        grid-column: 2 / span 3;
+        grid-row: 2;
+    }
+
+    .task-list, .todo-list .task-list, .new.list, .btn.delete
+    {
+        font-size: 12px;
+    }
+
+    .btn.create
+    {
+        font-size: 20px;
+    }
+
+    .task
+    {
+        font-size: 14px;
+    }
+
+    .delete-stuff
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list-title, .list-subtitle, .task-list-title
+    {
+        font-size: 16px;
+    }
+
     
     /***** Contact *****/
     
@@ -297,6 +365,13 @@
         background-color: rgba(255, 255, 255, 0.8);
     }
 
+    #caracteres
+    {
+        font-size: 12px;
+        width: 90%;
+        max-width: 29em;
+    }
+
     .champ > button.submit
     {
         padding: 0.4em 0.8em;
@@ -328,7 +403,7 @@
         min-height: 40vh;
     }
 
-    .copyright h3
+    .copyright h4
     {
         font-size: 9px;
         padding: 0.6em;

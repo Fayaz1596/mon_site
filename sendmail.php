@@ -10,26 +10,7 @@
     $message = trim($_POST['message']);
 
     if(!empty($nom) && !empty($email) && !empty($message))
-    {   
-        if(strlen($nom) <= 3 && !filter_var($email, FILTER_VALIDATE_EMAIL))
-        {
-            $statut = "mauvais";
-            $info = "Le nom et prénom doit contenir au moins 3 caractères et l'e-mail n'est pas entièrement saisi !";
-        }
-        else
-        {
-            if(strlen($nom) <= 3)
-            {
-                $statut = "mauvais";
-                $info = "Le nom et prénom doit contenir au moins 3 caractères !";
-            }
-            if(!filter_var($email, FILTER_VALIDATE_EMAIL))
-            {
-                $statut = "mauvais";
-                $info = "L'e-mail n'est pas entièrement saisi !";
-            }
-        }
-
+    {
         $mail = new PHPMailer;
 
         $mail->isSMTP();
@@ -64,11 +45,29 @@
                         </html>
                         ';
 
-        if($mail->send())
+        if(strlen($nom) <= 3 && !filter_var($email, FILTER_VALIDATE_EMAIL))
         {
-            $statut = 'bon';
-            $info = 'Votre message a été envoyé !';
+            $statut = "mauvais";
+            $info = "Le nom et le prénom doivent contenir au moins 4 caractères et l'e-mail n'est pas entièrement saisi !";
         }
+        else if(strlen($nom) <= 3)
+        {
+            $statut = "mauvais";
+            $info = "Le nom et le prénom doivent contenir au moins 4 caractères !";
+        }
+        else if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+        {
+            $statut = "mauvais";
+            $info = "L'e-mail n'est pas entièrement saisi !";
+        }
+        else
+        {
+            if($mail->send())
+            {
+                $statut = 'bon';
+                $info = 'Votre message a été envoyé !';
+            }
+        }  
     }
     else
     {

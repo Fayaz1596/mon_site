@@ -49,6 +49,7 @@
     
     .logo
     {
+        width: 25%;
         margin-left: 0;
     }
     
@@ -74,7 +75,7 @@
     
     
     /*** Nav ***/
-    
+
     .nav-main
     {
         display: none;
@@ -167,12 +168,12 @@
         padding: 4rem 3rem;
     }
     
-    .branding h1
+    .branding h1:first-child
     {
         font-size: 2.3rem;
     }
 
-    .branding h2
+    .branding h1:last-child
     {
         font-size: 1.8rem;
         font-family: 'Quicksand', sans-serif;
@@ -354,6 +355,7 @@
     {
         font-size: 15px;
         transition: none;
+        height: 34px;
     }
     
     .voir:hover
@@ -362,6 +364,117 @@
         background-color: #d28a00;
     }
     
+
+    /***** Tâches *****/
+    
+    #taches
+    {
+        background-attachment: scroll;
+        min-height: 50vh;
+    }
+    
+    .taches
+    {
+        padding: 4rem 3rem;
+    }
+    
+    .fa-pen-square
+    {
+        font-size: 1.9em;
+    }
+    
+    .taches .titre h2
+    {
+        font-size: 24px;
+    }
+    
+    .taches .titre p
+    {
+        font-size: 17px;
+    }
+
+    .liste_taches
+    {
+        grid-template-columns: minmax(25px, 250px) minmax(150px, 500px);
+    }
+    
+    .task-list, .todo-list .task-list, .new.list, .btn.delete
+    {
+        font-size: 13px;
+    }
+
+    .list-name:hover, .btn.create:hover
+    {
+        opacity: 1;
+    }
+
+    .btn.create
+    {
+        font-size: 21px;
+        transition: none;
+    }
+
+    .btn.delete
+    {
+        transition: none;
+    }
+
+    .btn.delete:hover
+    {
+        background-color: #d28a00;
+    }
+
+    .new
+    {
+        transition: none;
+    }
+
+    .new.list:focus
+    {
+        border-bottom: 1px solid white;
+    }
+
+    .new.task:focus
+    {
+        border-bottom: 1px solid black;
+    }
+
+    .new:focus::placeholder
+    {
+        opacity: 0.3;
+    }
+
+    .task
+    {
+        font-size: 15px;
+    }
+
+    .custom-checkbox
+    {
+        transition: none;
+    }
+
+    .task:hover .custom-checkbox
+    {
+        transform: none;
+        color: black;
+    }
+
+    [type="checkbox"] + label
+    {
+        transition: none;
+    }
+
+    [type="checkbox"]:checked + label::after
+    {
+        transform: none;
+    }
+
+    .list-title, .list-subtitle, .task-list-title
+    {
+        font-size: 17px;
+    }
+
     
     /***** Contact *****/
     
@@ -392,7 +505,6 @@
 
     .champ_input input
     {
-        margin: 10px 4px 0;
         width: 256px;
         font-size: 15px;
     }
@@ -407,6 +519,12 @@
     {
         transition: none;
         background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    #caracteres
+    {
+        font-size: 13px;
+        width: 40em;
     }
     
     .champ > button.submit
@@ -445,7 +563,7 @@
         min-height: 50vh;
     }
     
-    .copyright h3
+    .copyright h4
     {
         font-size: 10px;
     }

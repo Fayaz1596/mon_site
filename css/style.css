@@ -114,6 +114,7 @@ a
     flex-direction: column;
     -webkit-flex-direction: column;
     box-shadow: inset 0 1px 2px black;
+    /*display: grid;*/
 }
 
 .header-img
@@ -169,9 +170,22 @@ a
     /*border: 1px solid blue;*/
 }
 
+/*.nav-main
+{
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0.5em;
+    /* border: 1px solid blue; */
+    /*display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1;
+}*/
+
+
 .logo
 {
-    width: 25%;
+    width: 20%;
 /*    border: 1px solid purple;*/
     display: flex;
     display: -webkit-flex;
@@ -180,7 +194,15 @@ a
     flex-direction: row;
     -webkit-flex-direction: row;
     color: #E2D5AB;
+    /*grid-column: 1;*/
 }
+
+/*.logo
+{
+    /* border: 1px solid purple; */
+    /*grid-column: 1;
+    color: #E2D5AB;
+}*/
 
 .logo img
 {
@@ -196,17 +218,6 @@ a
     opacity: 0;
     position: relative;
     /*border: 1px solid purple;*/
-}
-
-.logo h1
-{
-    font-family: "Quicksand", sans-serif;
-    font-weight: 600;
-    font-size: 13px;
-    animation: fondu 1s forwards 0.25s;
-    -webkit-animation: fondu 1s forwards 0.25s;
-    opacity: 0;
-    position: relative;
 }
 
 @keyframes fondu
@@ -249,8 +260,14 @@ a
 
 nav
 {
-    width: 75%;
+    width: 80%;
 }
+
+/*nav
+{
+    /* border: 1px solid purple; */
+    /*grid-column: 2 / span 3;
+}*/
 
 nav ul
 {
@@ -265,6 +282,16 @@ nav ul
     align-items: center;
     -webkit-align-items: center;
 }
+
+/*nav ul
+{
+    text-align: right;
+    /* border: 1px solid red; */
+    /*display: grid;
+    justify-content: end;
+    align-items: center;
+    grid-template-columns: repeat(5, auto);
+}*/
 
 nav li
 {
@@ -372,14 +399,14 @@ nav a:hover
     
 }
 
-.branding h1
+.branding h1:first-child
 {
     font-size: 2.5em;
     padding: 0 1em 1em 1em;
     font-weight: 600;
 }
 
-.branding h2
+.branding h1:last-child
 {
     font-size: 2em;
     font-weight: 500;
@@ -399,6 +426,7 @@ nav a:hover
     display: flex;
     display: -webkit-flex;
     min-height: 75vh;
+    /*display: grid;*/
 }
 
 .fa-info-circle
@@ -409,7 +437,6 @@ nav a:hover
 
 .profile
 {
-    width: 100%;
     padding: 5rem 2.5rem;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
@@ -459,14 +486,14 @@ a .fa-linkedin:hover
 
 #course
 {
-    background-image: linear-gradient(rgba(91, 62, 0, 0.8) 100%, rgba(91, 62, 0, 0.8) 100%), url(../img/books.jpeg);
+    background-image: linear-gradient(rgba(91, 62, 0, 0.85) 100%, rgba(91, 62, 0, 0.85) 100%), url(../img/books.jpeg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     display: flex;
     display: -webkit-flex;
-    width: 100%;
     min-height: 75vh;
+    /*display: grid;*/
 }
 
 #course div h2, #course div p
@@ -620,15 +647,15 @@ a .fa-linkedin:hover
 #projets
 {
     /*background-color: rgb(49, 0, 0);*/
-    background: linear-gradient(rgba(91, 62, 0, 0.8) 100%, rgba(91, 62, 0, 0.8) 100%), url(../img/img13.jpg);
+    background-image: linear-gradient(rgba(91, 62, 0, 0.85) 100%, rgba(91, 62, 0, 0.85) 100%), url(../img/img13.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     display: flex;
     display: -webkit-flex;
-    width: 100%;
     font-family: 'Quicksand', sans-serif;
     min-height: 75vh;
+    /*display: grid;*/
 }
 
 .projets
@@ -782,13 +809,416 @@ a .fa-linkedin:hover
     cursor: pointer;
 	font-size: 16px;
 	font-weight: 400;
-	transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    height: 36px;
+    display: flex;
+    align-items: center;
 }
 
 .voir:hover 
 {
 	transition: all 0.2s linear;
     background-color: rgba(210, 138, 0, 0.6);
+}
+
+
+/***** Tâches *****/
+
+#taches
+{
+    /*background-color: rgb(49, 0, 0);*/
+    background-image: linear-gradient(rgba(91, 62, 0, 0.85) 100%, rgba(91, 62, 0, 0.85) 100%), url(../img/basic-fit-garges-les-gonesse3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    display: -webkit-flex;
+    font-family: 'Quicksand', sans-serif;
+    min-height: 75vh;
+    /*display: grid;*/
+}
+
+.taches
+{
+    padding: 5rem 2.5rem;
+    position: relative;
+}
+
+.fa-tasks
+{
+    color: white;
+}
+
+.taches .titre
+{
+    width: 100%;
+    padding: 0 0 1rem;
+    text-align: center;
+    /*border: 1px solid red;*/
+}
+
+.taches .titre h2
+{
+    font-size: 25px;
+    font-weight: 500;
+    padding: 1rem;
+}
+
+.taches .titre h2
+{
+    color: white;
+}
+
+.liste_taches
+{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: minmax(150px, 350px) minmax(250px, 650px);
+    justify-content: center;
+}
+
+.all-tasks
+{
+    color: white;
+    min-height: 110.4px;
+    max-height: 334.4px;
+}
+
+.todo-list form
+{
+    display: flex;
+}
+
+.all-tasks > div:first-child
+{
+    background-color: black;
+}
+
+.all-tasks form
+{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 0.4em 0.8em 1em;
+}
+
+.task-list
+{
+    font-size: 14px;
+    line-height: 1.6;
+    list-style: disc;
+    padding: 0 2em;
+    overflow-y: scroll;
+    scrollbar-color: white black;
+    scrollbar-width: thin;
+    min-height: 0px;
+    max-height: 224px;
+    margin: 5px 0;
+}
+
+.list-scrollbar::-webkit-scrollbar 
+{
+    width: 10px;
+    background-color: #000;
+}
+
+.list-scrollbar::-webkit-scrollbar-thumb 
+{
+    background-color: white; 
+    background-clip: padding-box;
+    border: 2px solid rgba(0, 0, 0, 0);
+    box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.2), inset 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.todo-list .task-list
+{
+    font-size: 14px;
+    line-height: 1.6;
+    list-style: circle;
+    padding-left: 1em;
+}
+
+.list-name
+{
+    cursor: pointer;
+    overflow-wrap: break-word;
+    transition: color 150ms ease-in-out;
+}
+
+.list-name:hover
+{
+    color: orange;
+}
+
+.btn
+{
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    padding: 0;
+    color: inherit;
+}
+
+.btn.create
+{
+    font-size: 22px;
+    font-weight: 500;
+    margin-right: 0.4em;
+    transition: opacity 200ms ease-in;
+    margin-top: 3px;
+}
+
+.btn.create:hover
+{
+    opacity: 0.7;
+}
+
+.btn.delete
+{
+    margin-top: 6px;
+    font-size: 14px;
+    transition: background-color 150ms;
+    padding: 4px 8px;
+    background-color: #d28a00;
+    color: white;
+    border: none;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none; 
+}
+
+.btn.delete:hover
+{
+    background-color: orange;
+}
+
+.new
+{
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    border-bottom: 1px solid currentColor;
+    color: white;
+    outline: none;
+    transition: border-bottom 150ms ease-in;
+    order: 2;
+    padding: 0.25em;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.new::placeholder
+{
+    opacity: 0.4;
+}
+
+.new.list:focus
+{
+    border-bottom: 2px solid white;
+}
+
+.new.task:focus
+{
+    border-bottom: 2px solid black;
+}
+
+.new:focus::placeholder
+{
+    opacity: 0.15;
+}
+
+.new.list
+{
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.new.task
+{
+    color: black;
+    margin-bottom: 0;
+    height: 2em;
+}
+
+.active-list
+{
+    font-weight: 500;
+}
+
+.todo-list
+{
+    min-height: 168.8px;
+    max-height: 495.2px;
+}
+
+.todo-list > div:first-child
+{
+    background-color: white;
+}
+
+.todo-header
+{
+    background: orange;
+    padding: 1em;
+}
+
+.todo-body
+{
+    position: relative;
+}
+
+.tasks
+{
+    min-height: 0px;
+    max-height: 330px;
+    overflow-y: scroll;
+    scrollbar-color: black white;
+    scrollbar-width: thin;
+    padding: 0 1em;
+    margin: 15px 0 5px;
+}
+
+.task-scrollbar::-webkit-scrollbar 
+{
+    width: 10px;
+    background-color: white;
+}
+
+.task-scrollbar::-webkit-scrollbar-thumb 
+{
+    background-color: black; 
+    background-clip: padding-box;
+    border: 2px solid rgba(0, 0, 0, 0);
+    box-shadow: inset -1px -1px 0px rgba(255, 255, 255, 0.2), inset 1px 1px 0px rgba(255, 255, 255, 0.2);
+}
+
+.new-task-creator
+{
+    padding: 0.4em 1em;
+}
+
+.new-task-creator .create
+{
+    color: orange;
+}
+
+[type="checkbox"]
+{
+    opacity: 0;
+    position: absolute;
+}
+
+.task label
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.task
+{
+    position: relative;
+    margin-bottom: 1.25em;
+    line-height: 1.2;
+    font-size: 16px;
+}
+
+.task::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.5em;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.1;
+}
+
+.custom-checkbox
+{
+    display: inline-block;
+    min-width: 0.75em;
+    min-height: 0.75em;
+    cursor: pointer;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    margin-right: 0.75em;
+    transform: scale(1);
+    transition: transform 250ms ease-in-out;
+}
+
+.task:hover .custom-checkbox
+{
+    transform: scale(1.1);
+    color: orange;
+}
+
+[type="checkbox"]:checked + label .custom-checkbox
+{
+    background: orange;
+    border-color: orange;
+    box-shadow: inset 0 0 0 1px white;
+}
+
+[type="checkbox"] + label
+{
+    opacity: 1;
+    transition: opacity 200ms ease;
+}
+
+[type="checkbox"]:checked + label
+{
+    opacity: 0.5;
+}
+
+.delete-stuff
+{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    padding: 0.5em 1em 1em;
+}
+
+.list-title
+{
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    overflow-wrap: break-word;
+}
+
+.list-subtitle
+{
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    overflow-wrap: break-word;
+}
+
+.list-header
+{
+    padding: 1em;
+    box-shadow: inset 0 -3px 0px orange;
+}
+
+.task-list-title
+{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.liste_taches form input, .liste_taches button
+{
+    font-family: 'Quicksand', sans-serif;
 }
 
 
@@ -800,6 +1230,7 @@ a .fa-linkedin:hover
     display: flex;
     display: -webkit-flex;
     min-height: 75vh;
+    /*display: grid;*/
 }
 
 .contact
@@ -891,6 +1322,22 @@ a .fa-linkedin:hover
     background-color: rgba(255, 255, 255, 0.4);
 }
 
+#caracteres
+{
+    color: white;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 3px auto;
+    width: 41.6em;
+}
+
+#caracteres > b
+{
+    font-weight: 500;
+}
+
 .champ > button.submit
 {
     margin: 1em 0 0;
@@ -915,19 +1362,19 @@ a .fa-linkedin:hover
     background-color: rgba(210, 138, 0, 0.6);
 }
 
-fa-check-circle
+.fa-check-circle
 {
     font-size: 14px;
     color: white;
 }
 
-fa-exclamation-triangle
+.fa-exclamation-triangle
 {
     font-size: 14px; 
     color: white;
 }
 
-fa-spinner
+.fa-spinner
 {
     font-size: 14px;
     color: white;
@@ -1001,7 +1448,7 @@ fa-spinner
     box-shadow: inset 0 1px 2px black;
 }
 
-.copyright h3
+.copyright h4
 {
     text-align: center;
     font-size: 11px;
