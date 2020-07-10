@@ -49,6 +49,7 @@
     
     .logo
     {
+        width: 25%;
         margin-left: 0;
     }
     
@@ -59,22 +60,11 @@
         margin-right: 0.4em;
         flex-shrink: 0;
         -webkit-flex-shrink: 0;
-        opacity: 1;
-        animation: none;
-        -webkit-animation: none;
-    }
-    
-    .logo h1
-    {
-        opacity: 1;
-        animation: none;
-        -webkit-animation: none;
-        font-size: 12px;
     }
     
     
     /*** Nav ***/
-    
+
     .nav-main
     {
         display: none;
@@ -101,7 +91,7 @@
     }
     
      /* Dropdown Button */
-    .dropbtn 
+    .dropbtn
     {
         background-color: transparent;
         color: #E2D5AB;
@@ -113,6 +103,10 @@
 	    -moz-appearance: none;
 	    appearance: none;
         line-height: 0;
+        opacity: 0;
+        position: relative;
+        animation: fondu1 1s forwards 0.25s;
+        -webkit-animation: fondu1 1s forwards 0.25s;
         /*border: 1px solid blue;*/
     }
 
@@ -167,12 +161,12 @@
         padding: 4rem 3rem;
     }
     
-    .branding h1
+    .branding h1:first-child
     {
         font-size: 2.3rem;
     }
 
-    .branding h2
+    .branding h1:last-child
     {
         font-size: 1.8rem;
         font-family: 'Quicksand', sans-serif;
@@ -183,6 +177,11 @@
     /************/
     /*** MAIN ***/
     /************/
+    
+    .profile, .course, .projets, .taches, .contact
+    {
+        opacity: 1;
+    }
     
     /***** Profile *****/
     
@@ -233,6 +232,7 @@
     #course
     {
         background-attachment: scroll;
+        background-size: cover;
         min-height: 50vh;
     }
     
@@ -260,6 +260,16 @@
     {
         width: 272px;
     }
+
+    .fa-html5, .fa-css3-alt, .fa-js, .fa-php, .fa-angular, .fa-bootstrap, .fa-node, .fa-react, .fa-java, .fa-python, .fa-android
+    {
+        font-size: 31px;
+    }
+
+    .fa-csharp
+    {
+        width: 31px;
+    }
     
     .intitule span, .lanw p, .lanp p
     {
@@ -283,6 +293,7 @@
     #projets
     {
         background-attachment: scroll;
+        background-size: cover;
         min-height: 50vh;
     }
     
@@ -343,6 +354,7 @@
     {
         font-size: 15px;
         transition: none;
+        height: 34px;
     }
     
     .voir:hover
@@ -351,6 +363,103 @@
         background-color: #d28a00;
     }
     
+
+    /***** Tâches *****/
+    
+    #taches
+    {
+        background-attachment: scroll;
+        background-size: cover;
+        min-height: 50vh;
+    }
+    
+    .taches
+    {
+        padding: 4rem 3rem;
+    }
+    
+    .fa-pen-square
+    {
+        font-size: 1.9em;
+    }
+    
+    .taches .titre h2
+    {
+        font-size: 24px;
+    }
+    
+    .taches .titre p
+    {
+        font-size: 17px;
+    }
+
+    .liste_taches
+    {
+        grid-template-columns: minmax(100px, 300px) minmax(200px, 600px);
+    }
+    
+    .task-list, .todo-list .task-list, .new.list, .btn.delete, .btn.edit
+    {
+        font-size: 14px;
+    }
+
+    .list-name:hover, .btn.create:hover
+    {
+        opacity: 1;
+    }
+
+    .all-tasks .btn.create
+    {
+        font-size: 23px;
+    }
+
+    .todo-list .btn.create
+    {
+        font-size: 27px;
+    }
+
+    .btn.edit, btn.delete, .new, .custom-checkbox, [type="checkbox"] + label
+    {
+        transition: none;
+    }
+
+    .new.list:focus
+    {
+        border-bottom: 1px solid white;
+    }
+
+    .new.task:focus
+    {
+        border-bottom: 1px solid black;
+    }
+
+    .task
+    {
+        font-size: 15px;
+    }
+
+    .custom-checkbox
+    {
+        min-width: 11px;
+        min-height: 11px;
+    }
+
+    .task:hover .custom-checkbox
+    {
+        transform: scale(1);
+        color: black;
+    }
+
+    [type="checkbox"]:checked + label::after
+    {
+        transform: none;
+    }
+
+    .list-title, .list-subtitle, .task-list-title
+    {
+        font-size: 17px;
+    }
+
     
     /***** Contact *****/
     
@@ -381,7 +490,6 @@
 
     .champ_input input
     {
-        margin: 10px 4px 0;
         width: 256px;
         font-size: 15px;
     }
@@ -396,6 +504,12 @@
     {
         transition: none;
         background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    #caracteres
+    {
+        font-size: 13px;
+        width: 40em;
     }
     
     .champ > button.submit
@@ -431,10 +545,10 @@
     #footer-main
     {
         margin-top: 0;
-        min-height: 50vh;
+        min-height: 40vh;
     }
     
-    .copyright h3
+    .copyright h4
     {
         font-size: 10px;
     }

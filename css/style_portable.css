@@ -40,11 +40,6 @@
         margin-left: 0.5em;
     }
     
-    .logo h1
-    {
-        font-size: 11px;
-    }
-    
     
     /*** Nav ***/
     
@@ -77,12 +72,12 @@
         padding: 20vw 8vw 20vw 8vw;
     }
     
-    .branding h1
+    .branding h1:first-child
     {
         font-size: 2rem;
     }
 
-    .branding h2
+    .branding h1:last-child
     {
         font-size: 1.5rem;
     }
@@ -169,6 +164,16 @@
     {
         width: 30%;
     }
+
+    .fa-html5, .fa-css3-alt, .fa-js, .fa-php, .fa-angular, .fa-bootstrap, .fa-node, .fa-react, .fa-java, .fa-python, .fa-android
+    {
+        font-size: 30px;
+    }
+
+    .fa-csharp
+    {
+        width: 30px;
+    }
     
     .intitule span, .lanw p, .lanp p
     {
@@ -241,8 +246,89 @@
     {
         padding: 0.4em 0.8em;
         font-size: 14px;
+        height: 29.2px;
     }
     
+
+    /***** Tâches *****/
+    
+    .fa-pen-square
+    {
+        font-size: 1.8em;
+    }
+    
+    .taches
+    {
+        padding: 8vw;
+    }
+    
+    .taches .titre h2
+    {
+        font-size: 23px;
+    }
+    
+    .taches .titre p
+    {
+        font-size: 16px;
+    }
+
+    .liste_taches
+    {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .all-tasks
+    {
+        grid-column: 3;
+        grid-row: 1;
+        max-height: none;
+    }
+
+    .todo-list
+    {
+        grid-column: 2 / span 3;
+        grid-row: 2;
+        max-height: none;
+    }
+
+    .task-list, .todo-list .task-list, .new.list, .btn.delete, .btn.edit
+    {
+        font-size: 13px;
+    }
+
+    .all-tasks .btn.create
+    {
+        font-size: 22px;
+    }
+
+    .todo-list .btn.create
+    {
+        font-size: 26px;
+    }
+
+    .task
+    {
+        font-size: 14px;
+    }
+
+    .custom-checkbox
+    {
+        min-width: 10px;
+        min-height: 10px;
+    }
+
+    .delete-stuff
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list-title, .list-subtitle, .task-list-title
+    {
+        font-size: 16px;
+    }
+
     
     /***** Contact *****/
     
@@ -278,13 +364,19 @@
         max-width: 25em;
         font-size: 14px;
         padding: 0.6em;
-        transition: all 0.2s linear;
     }
 
     .champ_input input:hover, .champ textarea:hover, .champ_input input:focus, .champ textarea:focus
     {
         transition: none;
         background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    #caracteres
+    {
+        font-size: 12px;
+        width: 90%;
+        max-width: 29em;
     }
 
     .champ > button.submit
@@ -312,13 +404,8 @@
     /**************/
     /*** FOOTER ***/
     /**************/
-    
-    #footer-main
-    {
-        min-height: 40vh;
-    }
 
-    .copyright h3
+    .copyright h4
     {
         font-size: 9px;
         padding: 0.6em;
