@@ -7,13 +7,14 @@ if(window.matchMedia("(min-width: 200px) and (max-width: 767px)").matches)
     
     function navbarLinkClick(e)
     {
+        e.preventDefault();
         smoothScroll(e);
     }
     
     function smoothScroll(e)
     {
         const targetId = e.currentTarget.getAttribute("href");
-        const targetPosition = document.querySelector(targetId).offsetTop - 39;
+        const targetPosition = document.querySelector(targetId).offsetTop - 48;
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
         const duration = 800;
@@ -48,7 +49,7 @@ if(window.matchMedia("(min-width: 200px) and (max-width: 767px)").matches)
     const scrollMenu = (e) =>
     {
         const navLien = document.querySelectorAll("#myDropdown a");
-        const scrollPos = window.pageYOffset + 45 || document.documentElement.scrollTop + 45 || document.body.scrollTop + 45;
+        const scrollPos = window.pageYOffset + 49 || document.documentElement.scrollTop + 49 || document.body.scrollTop + 49;
         
         for(let i = 0; i < navLien.length; i++)
         {
@@ -78,6 +79,7 @@ else if(window.matchMedia("(max-width: 1023px)").matches)
     
     function navbarLinkClick(e)
     {
+        e.preventDefault();
         smoothScroll(e);
     }
     
@@ -261,7 +263,7 @@ else
     {
         window.addEventListener("scroll", () =>
         {
-            section.style.backgroundPositionY = `-${window.scrollY / 2}px`; 
+            section.style.backgroundPositionY = `-${window.scrollY / 1.5}px`; 
         }
         );
     }
@@ -411,183 +413,183 @@ document.addEventListener("mouseup", (e) =>
 })();
 
 
-// Liste des tâches
-const listesConteneur = document.querySelector('[data-listes]')
-const nouvelleListe = document.querySelector('[data-liste-formulaire]')
-const nouvelleListeChamp = document.querySelector('[data-liste-champ]')
-const nouvelleListeChamp2 = document.querySelector('[data-liste-champ2]')
-const supprimerListe = document.querySelector('[data-supprimer-liste]')
-const listeContenu = document.querySelector('[data-liste-contenu]')
-const listeTitre = document.querySelector('[data-liste-titre]')
-const listeSousTitre = document.querySelector('[data-liste-sous-titre]')
-const tachesConteneur = document.querySelector('[data-taches]')
-const tacheTemplate = document.getElementById('tache-template')
-const nouvelleTache = document.querySelector('[data-tache-formulaire]')
-const nouvelleTacheChamp = document.querySelector('[data-tache-champ]')
-const effacerTaches = document.querySelector('[data-supprimer-tache]')
-
-const LOCAL_STORAGE_LIST_KEY = 'tache.listes'
-const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = 'tache.selectionneListeId'
-let listes = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || []
-let selectionneListeId = localStorage.getItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY)
-
-listesConteneur.addEventListener('click', e => 
-{
-    if(e.target.tagName.toLowerCase() === 'li')
-    {
-        selectionneListeId = e.target.dataset.listeId
-        sauvegardeEtRendu()
-    }
-})
-
-tachesConteneur.addEventListener('click', e => 
-{
-    if(e.target.tagName.toLowerCase() === 'input')
-    {
-        const selectionneListe = listes.find(liste => liste.id === selectionneListeId)
-        const selectionneTache = selectionneListe.taches.find(tache => tache.id === e.target.id)
-        selectionneTache.complete = e.target.checked
-        sauvegarde()
-    }
-})
-
-effacerTaches.addEventListener('click', e =>
-{
-    const selectionneListe = listes.find(liste => liste.id === selectionneListeId)
-    selectionneListe.taches = selectionneListe.taches.filter(tache => !tache.complete)
-    sauvegardeEtRendu()
-})
-
-supprimerListe.addEventListener('click', e =>
-{
-    listes = listes.filter(liste => liste.id !== selectionneListeId)
-    selectionneListeId = null
-    sauvegardeEtRendu()
-})
-
-nouvelleListe.addEventListener('submit', e => 
-{
-    e.preventDefault()
-    const listeNom = nouvelleListeChamp.value
-    const listeDescription = nouvelleListeChamp2.value
-    if((listeNom == null || listeDescription == null) || (listeNom === '' || listeDescription === ''))
-    {
-        return
-    }
-    const liste = creerListe(listeNom, listeDescription)
-    nouvelleListeChamp.value = null
-    nouvelleListeChamp2.value = null
-    listes.push(liste)
-    sauvegardeEtRendu()
-})
-
-nouvelleTache.addEventListener('submit', e => 
-{
-    e.preventDefault()
-    const tacheNom = nouvelleTacheChamp.value
-    if(tacheNom == null || tacheNom === '')
-    {
-        return
-    }
-    const tache = creerTache(tacheNom)
-    nouvelleTacheChamp.value = null
-    const selectionneListe = listes.find(liste => liste.id === selectionneListeId)
-    selectionneListe.taches.push(tache)
-    sauvegardeEtRendu()
-})
-
-function creerListe(nom, description)
-{
-    return { 
-        id: Date.now().toString(),
-        nom: nom,
-        description: description,
-        taches: []
-    }
-}
-
-function creerTache(nom)
-{
-    return { 
-        id: Date.now().toString(),
-        nom: nom,
-        complete: false
-    }
-}
-
-function sauvegardeEtRendu()
-{
-    sauvegarde()
-    rendu()
-}
-
-function sauvegarde()
-{
-    localStorage.setItem(LOCAL_STORAGE_LIST_KEY, JSON.stringify(listes))
-    localStorage.setItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY, selectionneListeId)
-}
-
-function rendu()
-{
-    effacerElement(listesConteneur)
-    renduListes()
-
-    const selectionneListe = listes.find(liste => liste.id == selectionneListeId)
-    if(selectionneListe == undefined)
-    {
-        listeContenu.style.display = 'none'
-    }
-    else
-    {
-        listeContenu.style.display = ''
-        listeTitre.innerText = selectionneListe.nom
-        listeSousTitre.innerText = selectionneListe.description
-        effacerElement(tachesConteneur)
-        renduTaches(selectionneListe)
-    } 
-}
-
-function renduTaches(selectionneListe)
-{
-    selectionneListe.taches.forEach(tache => 
-    {
-        const tacheElement = document.importNode(tacheTemplate.content, true)
-        const checkbox = tacheElement.querySelector('input[type="checkbox"]')
-        checkbox.id = tache.id
-        checkbox.checked = tache.complete
-        const label = tacheElement.querySelector('label')
-        const inputText = tacheElement.querySelector('input[type="text"]')
-        label.htmlFor = tache.id
-        label.append(tache.nom)
-        tachesConteneur.appendChild(tacheElement)
-    })
-}
-
-function renduListes()
-{
-    listes.forEach(liste => 
-    {
-        const listeElement = document.createElement('li')
-        listeElement.dataset.listeId = liste.id
-        listeElement.classList.add("list-name")
-        listeElement.innerText = liste.nom
-        if(liste.id === selectionneListeId)
-        {
-            listeElement.classList.add("active-list")
-        }
-        listesConteneur.appendChild(listeElement)
-    })
-}
-
-function effacerElement(element)
-{
-    while(element.firstChild)
-    {
-        element.removeChild(element.firstChild)
-    }
-}
-
-rendu()
+//// Liste des tâches
+//const listesConteneur = document.querySelector('[data-listes]')
+//const nouvelleListe = document.querySelector('[data-liste-formulaire]')
+//const nouvelleListeChamp = document.querySelector('[data-liste-champ]')
+//const nouvelleListeChamp2 = document.querySelector('[data-liste-champ2]')
+//const supprimerListe = document.querySelector('[data-supprimer-liste]')
+//const listeContenu = document.querySelector('[data-liste-contenu]')
+//const listeTitre = document.querySelector('[data-liste-titre]')
+//const listeSousTitre = document.querySelector('[data-liste-sous-titre]')
+//const tachesConteneur = document.querySelector('[data-taches]')
+//const tacheTemplate = document.getElementById('tache-template')
+//const nouvelleTache = document.querySelector('[data-tache-formulaire]')
+//const nouvelleTacheChamp = document.querySelector('[data-tache-champ]')
+//const effacerTaches = document.querySelector('[data-supprimer-tache]')
+//
+//const LOCAL_STORAGE_LIST_KEY = 'tache.listes'
+//const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = 'tache.selectionneListeId'
+//let listes = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || []
+//let selectionneListeId = localStorage.getItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY)
+//
+//listesConteneur.addEventListener('click', e => 
+//{
+//    if(e.target.tagName.toLowerCase() === 'li')
+//    {
+//        selectionneListeId = e.target.dataset.listeId
+//        sauvegardeEtRendu()
+//    }
+//})
+//
+//tachesConteneur.addEventListener('click', e => 
+//{
+//    if(e.target.tagName.toLowerCase() === 'input')
+//    {
+//        const selectionneListe = listes.find(liste => liste.id === selectionneListeId)
+//        const selectionneTache = selectionneListe.taches.find(tache => tache.id === e.target.id)
+//        selectionneTache.complete = e.target.checked
+//        sauvegarde()
+//    }
+//})
+//
+//effacerTaches.addEventListener('click', e =>
+//{
+//    const selectionneListe = listes.find(liste => liste.id === selectionneListeId)
+//    selectionneListe.taches = selectionneListe.taches.filter(tache => !tache.complete)
+//    sauvegardeEtRendu()
+//})
+//
+//supprimerListe.addEventListener('click', e =>
+//{
+//    listes = listes.filter(liste => liste.id !== selectionneListeId)
+//    selectionneListeId = null
+//    sauvegardeEtRendu()
+//})
+//
+//nouvelleListe.addEventListener('submit', e => 
+//{
+//    e.preventDefault()
+//    const listeNom = nouvelleListeChamp.value
+//    const listeDescription = nouvelleListeChamp2.value
+//    if((listeNom == null || listeDescription == null) || (listeNom === '' || listeDescription === ''))
+//    {
+//        return
+//    }
+//    const liste = creerListe(listeNom, listeDescription)
+//    nouvelleListeChamp.value = null
+//    nouvelleListeChamp2.value = null
+//    listes.push(liste)
+//    sauvegardeEtRendu()
+//})
+//
+//nouvelleTache.addEventListener('submit', e => 
+//{
+//    e.preventDefault()
+//    const tacheNom = nouvelleTacheChamp.value
+//    if(tacheNom == null || tacheNom === '')
+//    {
+//        return
+//    }
+//    const tache = creerTache(tacheNom)
+//    nouvelleTacheChamp.value = null
+//    const selectionneListe = listes.find(liste => liste.id === selectionneListeId)
+//    selectionneListe.taches.push(tache)
+//    sauvegardeEtRendu()
+//})
+//
+//function creerListe(nom, description)
+//{
+//    return { 
+//        id: Date.now().toString(),
+//        nom: nom,
+//        description: description,
+//        taches: []
+//    }
+//}
+//
+//function creerTache(nom)
+//{
+//    return { 
+//        id: Date.now().toString(),
+//        nom: nom,
+//        complete: false
+//    }
+//}
+//
+//function sauvegardeEtRendu()
+//{
+//    sauvegarde()
+//    rendu()
+//}
+//
+//function sauvegarde()
+//{
+//    localStorage.setItem(LOCAL_STORAGE_LIST_KEY, JSON.stringify(listes))
+//    localStorage.setItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY, selectionneListeId)
+//}
+//
+//function rendu()
+//{
+//    effacerElement(listesConteneur)
+//    renduListes()
+//
+//    const selectionneListe = listes.find(liste => liste.id == selectionneListeId)
+//    if(selectionneListe == undefined)
+//    {
+//        listeContenu.style.display = 'none'
+//    }
+//    else
+//    {
+//        listeContenu.style.display = ''
+//        listeTitre.innerText = selectionneListe.nom
+//        listeSousTitre.innerText = selectionneListe.description
+//        effacerElement(tachesConteneur)
+//        renduTaches(selectionneListe)
+//    } 
+//}
+//
+//function renduTaches(selectionneListe)
+//{
+//    selectionneListe.taches.forEach(tache => 
+//    {
+//        const tacheElement = document.importNode(tacheTemplate.content, true)
+//        const checkbox = tacheElement.querySelector('input[type="checkbox"]')
+//        checkbox.id = tache.id
+//        checkbox.checked = tache.complete
+//        const label = tacheElement.querySelector('label')
+//        const inputText = tacheElement.querySelector('input[type="text"]')
+//        label.htmlFor = tache.id
+//        label.append(tache.nom)
+//        tachesConteneur.appendChild(tacheElement)
+//    })
+//}
+//
+//function renduListes()
+//{
+//    listes.forEach(liste => 
+//    {
+//        const listeElement = document.createElement('li')
+//        listeElement.dataset.listeId = liste.id
+//        listeElement.classList.add("list-name")
+//        listeElement.innerText = liste.nom
+//        if(liste.id === selectionneListeId)
+//        {
+//            listeElement.classList.add("active-list")
+//        }
+//        listesConteneur.appendChild(listeElement)
+//    })
+//}
+//
+//function effacerElement(element)
+//{
+//    while(element.firstChild)
+//    {
+//        element.removeChild(element.firstChild)
+//    }
+//}
+//
+//rendu()
 
 
 $("#envoyer").ready(function()

@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="css/animate.css">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
         <script src="https://kit.fontawesome.com/a8b6ce1f83.js" crossorigin="anonymous"></script>
-        <meta name="google-site-verification" content="T0orNvOZ3Wq6puiYtMcQDTErb6h0HeiURl7fFY55q8Y" />
     </head>
     <body>
         <!-- Nav -->
@@ -26,7 +25,7 @@
                         <li><a href="#about" class="menu hide-menu" id="abo">À propos</a></li>
                         <li><a href="#course" class="menu hide-menu" id="cou">Parcours</a></li>
                         <li><a href="#projets" class="menu hide-menu" id="pro">Projets</a></li>
-                        <li><a href="#taches" class="menu hide-menu" id="tac">Tâches</a></li>
+<!--                        <li><a href="#taches" class="menu hide-menu" id="tac">Tâches</a></li>-->
                         <li><a href="#contact" class="menu hide-menu" id="con">Contact</a></li>
                     </ul>
                 </nav>
@@ -44,7 +43,7 @@
                         <a href="#about" class="menu">À propos</a>
                         <a href="#course" class="menu">Parcours</a>
                         <a href="#projets" class="menu">Projets</a>
-                        <a href="#taches" class="menu">Tâches</a>
+<!--                        <a href="#taches" class="menu">Tâches</a>-->
                         <a href="#contact" class="menu">Contact</a>
                     </div>
                 </div>
@@ -78,18 +77,18 @@
                         </a>
                     </p>
                     <p>Je m'appelle Bavasahib, j'ai 24 ans et je suis en Île-de-France.</p>
-                    <p>Je suis étudiant et passionné par le développement web depuis 3 ans, précisément sur de l'intégration/développement front-end.</p>
+                    <p>Je suis étudiant et passionné par le développement web depuis 3 ans, précisément sur du développement front-end que back-end.</p>
                     <img src="img/signature.png" alt="signature">
                 </div>
             </section>
 
             <!-- Course -->
-            <section id="course">
+            <section id="course" class="parallax parallax-one">
                 <div class="container course">
                     <i class="fas fa-graduation-cap fa-2x"></i>
                     <h2>Mon parcours</h2>
                     <p>J'ai eu un Baccalauréat Technologique en STI2D, un BTS option SN-IR (Systèmes Numériques - Informatique & Réseaux) de niveau bac+2 et une licence professionnelle en développement, systèmes d'information et ERP de niveau bac+3.</p>
-                    <p>J'ai codé un petit projet pour récupérer 2 listes depuis des API, la refonte de 2 sites web en front pour une entreprise et enfin mon site personnel qui est hébergé ici-même.</p>
+                    <p>J'ai codé un projet pour la gestion de liste de tâches en front et en back, un petit projet pour récupérer 2 listes depuis des API, la refonte de 2 sites web en front pour une entreprise et enfin mon site personnel qui est hébergé ici-même.</p>
                     <br>
                     <div class="titre">
                         <p>Compétences des langages appris :</p> 
@@ -106,7 +105,7 @@
                                     <p>HTML</p>
                                 </div>
                                 <div class="lanw">
-                                    <i class="fab fa-css3-alt" style="color: #2565AE;"></i>
+                                    <i class="fab fa-css3-alt" style="color: #2565ae;"></i>
                                     <p>CSS</p>
                                 </div>
                                 <div class="lanw">
@@ -122,16 +121,24 @@
                                     <p>Angular</p>
                                 </div>
                                 <div class="lanw">
-                                    <i class="fab fa-bootstrap" style="color: #602C50;"></i>
+                                    <i class="fab fa-bootstrap" style="color: #602c50;"></i>
                                     <p>Bootstrap</p>
-                                </div>
-                                <div class="lanw">
-                                    <i class="fab fa-node" style="color: #6cc24a;"></i>
-                                    <p>Node.js</p>
                                 </div>
                                 <div class="lanw">
                                     <i class="fab fa-react" style="color: #00d8ff;"></i>
                                     <p>ReactJS</p>
+                                </div>                                
+                                <div class="lanw">
+                                    <img src="img/bulma.png" class="fa-bulma">
+                                    <p>Bulma</p>
+                                </div> 
+                                <div class="lanw">
+                                    <i class="fab fa-sass" style="color: #cd6799;"></i>
+                                    <p>SCSS</p>
+                                </div>                                
+                                <div class="lanw">
+                                    <img src="img/express.png" class="fa-express">
+                                    <p>Express.js</p>
                                 </div>
                             </article>
                         </div>
@@ -142,7 +149,7 @@
                             </div>
                             <article class="logiciel">
                                 <div class="lanp">
-                                    <i class="fab fa-java" style="color: #ED8B00;"></i>
+                                    <i class="fab fa-java" style="color: #eD8b00;"></i>
                                     <p>Java</p>
                                 </div>
                                 <div class="lanp">
@@ -169,6 +176,22 @@
                         <p>Voici une liste de projets réalisés que j'ai mis sur la plateforme GitHub :</p> 
                     </div>
                     <div class="category">
+                        <article class="liste">
+                            <div class="nom">
+                                <a href="https://github.com/Fayaz1596/liste_taches" target="_blank">
+                                    <div>
+                                        <i class="fas fa-link" style="color: white;"></i>
+                                        <h3>Gestionnaire de tâches</h3>
+                                    </div>
+                                    <div>
+                                        <span>Bulma</span>
+                                        <span>SCSS</span>
+                                        <span>Angular</span>
+                                        <span>Express.js</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </article>                        
                         <article class="liste">
                             <div class="nom">
                                 <a href="https://github.com/Fayaz1596/projet_listes" target="_blank">
@@ -222,6 +245,7 @@
             </section>
 
             <!-- Tâches -->
+<!--
             <section id="taches">
                 <div class="container taches">
                     <div class="titre">
@@ -274,11 +298,12 @@
                             <label>
                                 <span class="custom-checkbox"></span>
                             </label>
-                            <!--<button class="btn edit">Modifier</button>-->
+                            <button class="btn edit">Modifier</button>
                         </div>
                     </template>
                 </div>
             </section>
+-->
 
             <!-- Contact -->
             <section id="contact">
@@ -322,6 +347,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="js/jquery.lettering.js"></script>
         <script src="js/jquery.textillate.js"></script>
-        <script defer src="js/script.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>

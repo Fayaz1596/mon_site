@@ -510,8 +510,8 @@ a .fa-linkedin:hover
 {
     background-image: linear-gradient(rgba(91, 62, 0, 0.85) 100%, rgba(91, 62, 0, 0.85) 100%), url(../img/books.jpeg);
     background-attachment: fixed;
-    background-position: center;
-    background-size: 250vh 250vh;
+    background-position-x: center;
+    background-size: cover;
     display: flex;
     display: -webkit-flex;
     min-height: 75vh;
@@ -629,14 +629,14 @@ a .fa-linkedin:hover
     padding: 0;
 }
 
-.fa-html5, .fa-css3-alt, .fa-js, .fa-php, .fa-angular, .fa-bootstrap, .fa-node, .fa-react, .fa-java, .fa-python, .fa-android
+.fa-html5, .fa-css3-alt, .fa-js, .fa-php, .fa-angular, .fa-bootstrap, .fa-react, .fa-java, .fa-python, .fa-android, .fa-sass
 {
     font-size: 32px;
 }
 
-.fa-csharp
+.fa-csharp, .fa-express, .fa-bulma
 {
-    width: 32px;
+    height: 32px;
 }
 
 .consulter
@@ -669,8 +669,8 @@ a .fa-linkedin:hover
 {
     background-image: linear-gradient(rgba(91, 62, 0, 0.85) 100%, rgba(91, 62, 0, 0.85) 100%), url(../img/img13.jpg);
     background-attachment: fixed;
-    background-position: center;
-    background-size: 250vh 250vh;
+    background-position-x: center;
+    background-size: cover;
     display: flex;
     display: -webkit-flex;
     min-height: 75vh;
@@ -848,8 +848,8 @@ a .fa-linkedin:hover
 {
     background-image: linear-gradient(rgba(91, 62, 0, 0.85) 100%, rgba(91, 62, 0, 0.85) 100%), url(../img/basic-fit-garges-les-gonesse3.jpg);
     background-attachment: fixed;
-    background-position: center;
-    background-size: 250vh 275vh;
+    background-position-x: center;
+    background-size: cover;
     display: flex;
     display: -webkit-flex;
     min-height: 75vh;

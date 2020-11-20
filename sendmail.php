@@ -31,9 +31,9 @@
         $mail->AddEmbeddedImage("img/banniere.jpg", "ma_banniere", "img/banniere.jpg");
         $mail->Body = '<html>
                             <body>
-                                <div align = "center">
+                                <div align="center">
                                     <img src="cid:ma_banniere" alt="ma_banniere"/><br>
-                                    <font size = "2pt">
+                                    <font size="2pt">
                                         <u>Nom de l\'expéditeur :</u> '.$_POST['nom'].'<br />
                                         <u>E-mail de l\'expéditeur :</u> '.$_POST['email'].'<br />
                                     </font>
@@ -45,14 +45,29 @@
                         </html>
                         ';
 
-        if($mail->send())
+        if(strlen($nom) <= 3 && !filter_var($email, FILTER_VALIDATE_EMAIL))
         {
-            $statut = 'bon';
-            $info = 'Votre message a été envoyé !';
+            $statut = "mauvais";
+            $info = "Le nom et le prénom doivent contenir au moins 4 caractères et l'e-mail n'est pas entièrement saisi !";
+        }
+        else if(strlen($nom) <= 3)
+        {
+            $statut = "mauvais";
+            $info = "Le nom et le prénom doivent contenir au moins 4 caractères !";
+        }
+        else if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+        {
+            $statut = "mauvais";
+            $info = "L'e-mail n'est pas entièrement saisi !";
         }
         else
         {
-        }
+            if($mail->send())
+            {
+                $statut = 'bon';
+                $info = 'Votre message a été envoyé !';
+            }
+        }  
     }
     else
     {

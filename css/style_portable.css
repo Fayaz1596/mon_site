@@ -165,12 +165,12 @@
         width: 30%;
     }
 
-    .fa-html5, .fa-css3-alt, .fa-js, .fa-php, .fa-angular, .fa-bootstrap, .fa-node, .fa-react, .fa-java, .fa-python, .fa-android
+    .fa-html5, .fa-css3-alt, .fa-js, .fa-php, .fa-angular, .fa-bootstrap, .fa-react, .fa-java, .fa-python, .fa-android, .fa-sass
     {
         font-size: 30px;
     }
 
-    .fa-csharp
+    .fa-csharp, .fa-express, .fa-bulma
     {
         width: 30px;
     }
