@@ -88,7 +88,7 @@
                     <i class="fas fa-graduation-cap fa-2x"></i>
                     <h2>Mon parcours</h2>
                     <p>J'ai eu un Baccalauréat Technologique en STI2D, un BTS option SN-IR (Systèmes Numériques - Informatique & Réseaux) de niveau bac+2 et une licence professionnelle en développement, systèmes d'information et ERP de niveau bac+3.</p>
-                    <p>J'ai codé un projet pour la gestion de liste de tâches en front et en back, un petit projet pour récupérer 2 listes depuis des API, la refonte de 2 sites web en front pour une entreprise et enfin mon site personnel qui est hébergé ici-même.</p>
+                    <p>J'ai codé un projet pour la gestion de liste de tâches en front et en back, la création d'une interface du contenu pour chaque onglet du tableau de bord d'un compte membre en récupérant les données avec l'API d'une application pour une entreprise, un petit projet pour récupérer 2 listes depuis des API, la refonte de l'interface de 2 sites web pour une entreprise et mon site personnel qui est hébergé ici-même.</p>
                     <br>
                     <div class="titre">
                         <p>Compétences des langages appris :</p> 
